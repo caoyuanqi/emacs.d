@@ -40,3 +40,5 @@ site-lisp/package/
 /ido.last
 /recentf
 /viper
+/lisp/.DS_Store
+/.DS_Store
