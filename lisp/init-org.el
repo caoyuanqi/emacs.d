@@ -88,13 +88,12 @@ typical word processor."
 
 (global-set-key (kbd "C-c c") 'org-capture)
 
-(setq org-capture-templates
-      `(("t" "todo" entry (file "")  ; "" => org-default-notes-file
-         "* NEXT %?\n%U\n" :clock-resume t)
-        ("n" "note" entry (file "")
-         "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
-        ))
-
+;; (setq org-capture-templates
+;;       `(("t" "todo" entry (file "")  ; "" => org-default-notes-file
+;;          "* NEXT %?\n%U\n" :clock-resume t)
+;;         ("n" "note" entry (file "")
+;;          "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
+;;         ))
 
 
 ;;; Refiling
@@ -338,6 +337,58 @@ typical word processor."
      (sh . t)
      (sql . nil)
      (sqlite . t))))
+
+
+;; Personal setting begin
+
+
+
+
+
+
+;; agenda's file
+
+;; define agenda's path
+(setq org-agenda-files (list "~/Dropbox/org/now.org"
+                             "~/Dropbox/org/later.org"))
+
+
+;; mobileorg settings
+(setq org-directory "~/Dropbox/org")
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/later.org")
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+(setq org-mobile-files '("~/Dropbox/org"))
+
+;; Org Capture
+(setq org-capture-templates
+      '(("t" "TODO" entry (file+headline (concat org-directory "/later.org") "TASKS")
+         "* TODO %?\n %i\n")
+        ("i" "IDEA" entry (file+headline (concat org-directory "/later.org") "IDEAS")
+         "* TODO %?\n %i\n")
+        ("w" "WAITING" entry (file+headline (concat org-directory "/later.org") "WAITING")
+         "* WAITING %?\n %i\n")
+        ))
+
+
+;;; try to  solve the problem of Copy and Paste Problems on Mac http://nickhigham.wordpress.com/2013/09/25/solutions-to-some-emacs-problems/
+(setq save-interprogram-paste-before-kill nil)
+
+;;; Auto calendar function in osx
+;; (add-hook 'after-save-hook
+;;           '(lambda ()
+;;              (when *is-a-mac*
+;;                (if (or (eq major-mode 'org-mode) (eq major-mode 'org-agenda-mode))
+;;                    (progn
+;;                      (setq org-add-event-command (concat "< " buffer-file-name))
+;;                      (call-process-shell-command "_org_file_handler" nil nil nil org-add-event-command))))))
+
+
+
+;;; Added the org-clock-statusbar support
+(when *is-a-mac*
+  (progn
+    (add-hook 'org-clock-in-hook (lambda () (call-process "/usr/bin/osascript" nil 0 nil "-e" (concat "tell application \"org-clock-statusbar\" to clock in \"" org-clock-current-task "\""))))
+    (add-hook 'org-clock-out-hook (lambda () (call-process "/usr/bin/osascript" nil 0 nil "-e" "tell application \"org-clock-statusbar\" to clock out")))))
 
 
 (provide 'init-org)

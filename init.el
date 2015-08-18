@@ -103,6 +103,11 @@
 
 (require 'init-dash)
 (require 'init-ledger)
+;; Customerize initial files
+(require 'init-eww)
+(require 'init-cmodel)
+(require 'init-elfeed)
+
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
