@@ -107,7 +107,8 @@
 (require 'init-eww)
 (require 'init-cmodel)
 (require 'init-elfeed)
-
+(require 'init-jdee)
+(require 'init-yasnippet)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
