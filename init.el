@@ -109,6 +109,7 @@
 (require 'init-elfeed)
 (require 'init-jdee)
 (require 'init-yasnippet)
+(require 'init-emmet-mode)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
