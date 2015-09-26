@@ -98,4 +98,17 @@
               (lambda () (inferior-js-keys-mode -1)))))
 
 
+;; ---------------------------------------------------------------------------
+;; Using the tern model
+;; This is following this web site: https://truongtx.me/2014/04/20/emacs-javascript-completion-and-refactoring/
+;; ---------------------------------------------------------------------------
+
+(require-package 'tern)
+(require-package 'tern-auto-complete )
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+  '(progn
+     (require 'tern-auto-complete)
+     (tern-ac-setup)))
+
 (provide 'init-javascript)
