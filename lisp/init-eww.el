@@ -4,13 +4,13 @@
 
 (global-set-key (kbd "C-x g") 'eww)
 
-;;(setq eww-search-prefix "http://www.google.com/search?q=")
+(setq eww-search-prefix "http://www.google.com/search?q=")
 
-;; (defcustom eww-search-prefix-google "http://www.google.com.au/search?hl=en&q="
-;;   "Prefix URL to search engine"
-;;   :version "24.4"
-;;   :group 'eww
-;;   :type 'string)
+(defcustom eww-search-prefix-google "http://www.google.com.au/search?hl=en&q="
+  "Prefix URL to search engine"
+  :version "24.4"
+  :group 'eww
+  :type 'string)
 
 
 ;; (defun eww-open (url)

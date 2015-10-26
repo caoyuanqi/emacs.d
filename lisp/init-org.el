@@ -363,8 +363,8 @@ typical word processor."
 (setq org-capture-templates
       '(("t" "TODO" entry (file+headline (concat org-directory "/later.org") "TASKS")
          "* TODO %?\n %i\n")
-        ("i" "IDEA" entry (file+headline (concat org-directory "/later.org") "IDEAS")
-         "* TODO %?\n %i\n")
+        ("n" "NEXT" entry (file+headline (concat org-directory "/later.org") "NEXT")
+         "* NEXT %?\n %i\n")
         ("w" "WAITING" entry (file+headline (concat org-directory "/later.org") "WAITING")
          "* WAITING %?\n %i\n")
         ))
@@ -390,5 +390,15 @@ typical word processor."
     (add-hook 'org-clock-in-hook (lambda () (call-process "/usr/bin/osascript" nil 0 nil "-e" (concat "tell application \"org-clock-statusbar\" to clock in \"" org-clock-current-task "\""))))
     (add-hook 'org-clock-out-hook (lambda () (call-process "/usr/bin/osascript" nil 0 nil "-e" "tell application \"org-clock-statusbar\" to clock out")))))
 
+
+;;; Solve the export to chinese character's problem
+(when *is-a-mac*
+  (progn
+    (setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/*/bin/x86_64-darwin/"))
+    (setq exec-path (append exec-path '("/usr/local/texlive/*/bin/x86_64-darwin/")))
+    (setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f"
+                                  "xelatex -interaction nonstopmode %f"))
+    )
+  )
 
 (provide 'init-org)
