@@ -42,3 +42,16 @@ site-lisp/package/
 /viper
 /lisp/.DS_Store
 /.DS_Store
+/lisp/q.log
+/.python-environments/default/.Python
+/.python-environments/default/bin/activate
+/.python-environments/default/bin/activate.csh
+/.python-environments/default/bin/activate.fish
+/.python-environments/default/bin/activate_this.py
+/.python-environments/default/bin/easy_install
+/.python-environments/default/bin/easy_install-2.7
+/.python-environments/default/bin/jediepcserver
+/.python-environments/default/bin/pip
+/.python-environments/default/bin/pip2
+/.python-environments/default/bin/pip2.7
+/.python-environments/default/bin/python
