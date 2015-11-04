@@ -111,6 +111,7 @@
 (require 'init-jdee)
 (require 'init-yasnippet)
 (require 'init-emmet-mode)
+(require 'init-web)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
