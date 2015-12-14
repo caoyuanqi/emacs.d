@@ -360,13 +360,12 @@ typical word processor."
 (setq org-mobile-files '("~/Dropbox/org"))
 
 ;; Org Capture
+
 (setq org-capture-templates
-      '(("t" "TODO" entry (file+headline (concat org-directory "/later.org") "TASKS")
-         "* TODO %?\n %i\n")
-        ("n" "NEXT" entry (file+headline (concat org-directory "/later.org") "NEXT")
-         "* NEXT %?\n %i\n")
-        ("w" "WAITING" entry (file+headline (concat org-directory "/later.org") "WAITING")
-         "* WAITING %?\n %i\n")
+      '(("t" "Next" entry (file+headline (concat org-directory "/later.org") "TASKS")
+         "* NEXT %?\n%U\n" :clock-resume t)
+        ("n" "note" entry (file+headline (concat org-directory "/later.org") "NOTES")
+         "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
         ))
 
 
