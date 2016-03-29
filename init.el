@@ -112,6 +112,9 @@
 (require 'init-yasnippet)
 (require 'init-emmet-mode)
 (require 'init-web)
+(require 'init-impatient)
+(require 'init-typescript)
+(require 'init-company)                 ;setting for typescript
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
