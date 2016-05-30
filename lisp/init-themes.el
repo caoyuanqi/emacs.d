@@ -4,6 +4,8 @@
 (require-package 'sublime-themes)
 (require-package 'color-theme-sanityinc-solarized)
 (require-package 'color-theme-sanityinc-tomorrow)
+(require-package 'zenburn-theme)
+
 
 ;;------------------------------------------------------------------------------
 ;; Old-style color theming support (via color-theme.el)

@@ -115,6 +115,7 @@
 (require 'init-impatient)
 (require 'init-typescript)
 (require 'init-company)                 ;setting for typescript
+(require 'init-jade)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
