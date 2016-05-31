@@ -116,6 +116,7 @@
 (require 'init-typescript)
 (require 'init-company)                 ;setting for typescript
 (require 'init-jade)
+(require 'init-evil)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
