@@ -106,6 +106,7 @@
 (require 'init-ledger)
 ;; Customerize initial files
 (require 'init-eww)
+(require 'init-w3m)
 (require 'init-cmodel)
 (require 'init-elfeed)
 (require 'init-jdee)
