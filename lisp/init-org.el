@@ -9,6 +9,10 @@
 (define-key global-map (kbd "C-c l") 'org-store-link)
 (define-key global-map (kbd "C-c a") 'org-agenda)
 
+
+;;; enable evil model fix in org model
+(require-package 'org-evil)
+(require 'org-evil)
 ;; Various preferences
 (setq org-log-done t
       org-completion-use-ido t
