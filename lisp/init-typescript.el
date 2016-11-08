@@ -1,6 +1,5 @@
 (require-package 'tide)
 (require 'tide)
-
 ;; sample config
 (add-hook 'typescript-mode-hook
           (lambda ()

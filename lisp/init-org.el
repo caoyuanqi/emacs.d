@@ -11,8 +11,7 @@
 
 
 ;;; enable evil model fix in org model
-(require-package 'org-evil)
-(require 'org-evil)
+
 ;; Various preferences
 (setq org-log-done t
       org-completion-use-ido t

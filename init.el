@@ -118,7 +118,7 @@
 (require 'init-company)                 ;setting for typescript
 (require 'init-jade)
 (require 'init-evil)
-(require 'init-eclim)
+;;(require 'init-eclim)
 (require 'init-osx-dictionary)
 ;; Extra packages which don't require any configuration
 
