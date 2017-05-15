@@ -8,4 +8,8 @@
 (require-package 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
+
+(require-package 'python-django)
+(require 'python-django)
+
 (provide 'init-python-mode)

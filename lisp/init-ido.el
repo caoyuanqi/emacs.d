@@ -18,6 +18,11 @@
 
 (require-package 'idomenu)
 
+(require-package 'ido-vertical-mode)
+(require 'ido-vertical-mode)
+(ido-vertical-mode 1)
+(setq ido-vertical-define-keys 'C-n-and-C-p-only)
+
 ;; Allow the same buffer to be open in different frames
 (setq ido-default-buffer-method 'selected-window)
 
