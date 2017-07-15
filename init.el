@@ -57,7 +57,7 @@
 (require 'init-recentf)
 (require 'init-ido)
 (require 'init-hippie-expand)
-(require 'init-auto-complete)
+;; (require 'init-auto-complete)g
 (require 'init-windows)
 (require 'init-sessions)
 (require 'init-fonts)
@@ -109,15 +109,16 @@
 (require 'init-w3m)
 (require 'init-cmodel)
 (require 'init-elfeed)
-(require 'init-jdee)
+;;(require 'init-jdee)
 (require 'init-yasnippet)
 (require 'init-emmet-mode)
 (require 'init-web)
 (require 'init-impatient)
+;setting for typescript
 (require 'init-typescript)
-(require 'init-company)                 ;setting for typescript
-(require 'init-jade)
 (require 'init-evil)
+(require 'init-company)
+(require 'init-jade)
 ;;(require 'init-eclim)
 (require 'init-solidity)
 (require 'init-osx-dictionary)
